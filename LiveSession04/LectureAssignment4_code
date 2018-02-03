@@ -1,0 +1,75 @@
+
+# Assignment website
+https://github.com/rudeboybert/fivethirtyeight
+
+# README.md
+https://github.com/rudeboybert/fivethirtyeight/blob/master/README.md
+
+# If using RStudio:
+View(bechdel)
+
+# To see a list of all data sets:
+data(package = "fivethirtyeight")
+
+# To see a more detailed list of all data sets, see the package vignette:
+vignette("fivethirtyeight", package = "fivethirtyeight")
+
+# For a complete list of vignettes run:
+
+browseVignettes(package = "fivethirtyeight")
+
+# For some data sets, there is an example analysis in a package vignette.
+# For example, we did this using the R code for the article The Dollar-And-Cents Case Against Hollywood's Exclusion of Women here:
+
+vignette("bechdel", package = "fivethirtyeight")
+
+library(fivethirtyeight)
+
+# List of all data sets
+data(package = "fivethirtyeight")
+
+# 18th data set:  college_recent_grads  (The Economic Guide To Picking A College Major)
+
+# readme.md for college_recent_grads.csv
+https://github.com/fivethirtyeight/data/blob/master/college-majors/readme.md
+
+# data link for college_recent_grads.csv
+https://github.com/fivethirtyeight/data/blob/master/college-majors/recent-grads.csv
+
+# Click Raw button for download link
+https://raw.githubusercontent.com/fivethirtyeight/data/master/college-majors/recent-grads.csv
+
+# Set wd to GitHub directory
+setwd("C://Users/Luke/SMU/MSDS_6306/Homework/LiveSession05")
+
+# Assign URL to object
+URL <- "https://raw.githubusercontent.com/fivethirtyeight/data/master/college-majors/recent-grads.csv" 
+
+# Download csv file from URL
+
+library(repmis)
+library(RCurl)
+
+download.file(URL, destfile = "./recent_grads.csv")
+
+# Assign
+
+df <- read.csv("recent_grads.csv", header=TRUE)
+
+# To see a more detailed list of all data sets, see the package vignette:
+vignette("fivethirtyeight", package = "fivethirtyeight")
+
+# Use a more detailed list of the data sets to write out the URL in a comment to the related news story(?)
+
+# Dimensions and Column Names
+
+dim(df)
+[1] 173  21
+
+colnames(df)
+ [1] "Rank"                 "Major_code"           "Major"                "Total"                "Men"                 
+ [6] "Women"                "Major_category"       "ShareWomen"           "Sample_size"          "Employed"            
+[11] "Full_time"            "Part_time"            "Full_time_year_round" "Unemployed"           "Unemployment_rate"   
+[16] "Median"               "P25th"                "P75th"                "College_jobs"         "Non_college_jobs"    
+[21] "Low_wage_jobs"       
+ 
