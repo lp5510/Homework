@@ -1,0 +1,112 @@
+---
+title: "Live Session Unit 4 Assignment"
+author: "Luke Pierce"
+date: "February 5, 2018"
+output:
+   html_document:
+     keep_md: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+####GitHub Repository: https://github.com/lp5510/Homework/tree/master/LiveSession04
+
+# Questions
+
+### 1. FiveThirtyEight Data:
+
+####Navigate on GitHub to https://github.com/rudeboybert/fivethirtyeight and read README.md. Seriously, it will include everything you need.
+
+https://github.com/rudeboybert/fivethirtyeight/blob/master/README.md
+
+####Install the fivethirtyeight package.
+
+
+```{r, fivethirtyeight_Package, echo = TRUE}
+
+#install.packages("fivethirtyeight")
+
+```
+
+####In the listing of Data sets in package 'fivethirtyeight,' assign the eighteenth data set to an object 'df.'
+
+```{r, fivethirtyeight_file_download, echo = TRUE}
+
+# Download csv file from URL
+
+library("fivethirtyeight")
+library(repmis)
+library(RCurl)
+
+URL <- "https://raw.githubusercontent.com/fivethirtyeight/data/master/college-majors/recent-grads.csv" 
+
+download.file(URL, destfile = "./recent_grads.csv")
+
+# Assign object to df
+
+df <- read.csv("recent_grads.csv", header=TRUE)
+
+```
+
+####Use a more detailed list of the data sets to write out the URL in a comment to the related news story.
+
+In the FiveThirtyEight article "The Economic Guide to Picking a College Major"(https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/),
+Ben Casselman presents an interesting analysis of the financial value of a 4 year college degree, where the data supports the notion that the most popular degree, Psychology, pays a below median wage of $31,500, while the far more unpopular (and difficult) Petroleum Engineering major can expect initial earnings of $110,000. It would be interesting to compare other technical but non-college based career paths in such fields in the real estate, plumbing or electrical trades.
+
+####Using R command(s), give the dimensions and column names of this data frame.
+
+```{r, df_commands, echo = TRUE}
+
+# Dimensions and Column Names
+dim(df)
+colnames(df)
+
+```
+
+### 2. Data Summary: Use your newly assigned data frame for Question 2. 
+
+####Write an R command that gives you the column names of the data frame.
+Right after that, write one that counts the number of columns but not rows. Hint: The number should match one of your numbers in Question 1d for dimensions. 
+ 
+```{r, df_ncol_command, echo = TRUE}
+
+# Column Names and number of columns
+colnames(df)
+ncol(df)
+
+```
+ 
+####Generate a count of each unique major_category in the data frame.
+I recommend using libraries to help.  I have demonstrated one briefly in live-session.  To be clear, this should look like a matrix or data frame containing the major_category and the frequency it occurs in the dataset. Assign it to major_count. 
+
+```{r, unique_data_count, echo = TRUE}
+
+library(plyr)
+major_count <- count(df, 'Major_category')
+major_count
+
+```
+
+####Make a barplot of major_count.
+To make things easier to read, put par(las=2) before your plot to make the text perpendicular to the axis.   Make sure to label the title with something informative (check the vignette if you need), label the x and y axis, and make it any color other than grey.  Assign the major_category labels to their respective bar.  Flip the barplot horizontally so that bars extend to the right, not upward.  All of these options can be done in a single pass of barplot(). Note: It's okay if it's wider than the preview pane.
+
+```{r, Category_of_College_Majors_plot, echo = TRUE}
+
+library(ggplot2)
+
+ggplot(major_count, aes(x=(Major_category), y=(freq))) +
+  geom_bar(stat='identity', fill = 'red') +
+  coord_flip() + labs(title ="Category of Major vs. Frequency", x = "Category of Major", y = "Frequency")
+
+
+```
+
+####Write the fivethirtyeight data to a csv file.
+Make sure that it does not have row labels.
+
+```{r, write_major_count_df_to_csv, echo = TRUE}
+
+write.csv(major_count, "major_count.csv", row.names=F)
+
+```
