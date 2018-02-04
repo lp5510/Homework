@@ -1,7 +1,9 @@
 # Unit04 Live Session Homework
 # Versioning
 
+
 ### Objectives:
+
 
 1) Install "fivethirtyeight" package and download the college_recent_grads.csv dataset used in the fivethrityeight article
 https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/
@@ -13,19 +15,23 @@ https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-maj
 
 ### Files:
 
+
 Input csv file and URL location from fivethirtyeight website (see above):
 
 #### recent_grads.csv
 #### https://raw.githubusercontent.com/fivethirtyeight/data/master/college-majors/recent-grads.csv
+
 
 RMarkdown and HTML files used to generate Category of Major Vs. Frequency barplot and csv output: 
 
 #### l_pierce_Livesession4assignment.Rmd
 #### l_pierce_Livesession4assignment.html
 
+
 Output csv of major_category and freq:
 
 #### major_count.csv
+
 
 Variables
 
