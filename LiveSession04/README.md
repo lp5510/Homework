@@ -22,10 +22,11 @@ Input csv file and URL location from fivethirtyeight website (see above):
 #### https://raw.githubusercontent.com/fivethirtyeight/data/master/college-majors/recent-grads.csv
 
 
-RMarkdown and HTML files used to generate Category of Major Vs. Frequency barplot and csv output: 
+RMarkdown, HTML and graphics files used to generate Category of Major Vs. Frequency barplot and csv output: 
 
 #### l_pierce_Livesession4assignment.Rmd
 #### l_pierce_Livesession4assignment.html
+#### l_pierce_Livesession4assignment_files
 
 
 Output csv of major_category and freq:
