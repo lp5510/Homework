@@ -4,6 +4,3 @@ Spring 2018
 
 Luke Pierce
 lepierce@smu.edu
-
-Assignment Folder
-Spring 2018
