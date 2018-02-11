@@ -36,7 +36,7 @@ Occurrence: Frequency of name (2016), integer
 
 y2015: 2015 Year of Birth listing of Children's Names in the US
 Type: 'data.frame'  
-32868 obs. of  3 variables:
+33063 obs. of  3 variables:
 Name      : First name, character
 Gender    : Factor w/ 2 levels "F","M"
 Occurrence: Frequency of name (2015), integer
