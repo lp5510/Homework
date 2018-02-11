@@ -8,11 +8,11 @@ for 2015-2016 from this dataset.
 
 ### Files:
 
-Assignment05: Commented R source code 
+Commented R source code: 
 
 #### Assignment5_code_file
 
-Assignment 5: Description of inputs and output files and generated objects: 
+Description of inputs and output files and generated objects: 
 
 #### Assignment5_codebook
 
