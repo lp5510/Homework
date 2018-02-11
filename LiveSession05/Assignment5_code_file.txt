@@ -95,12 +95,3 @@ FemaleTopTen
 
 # Write out to csv file
 write.csv(FemaleTopTen, file = "FemaleTopTen.csv", row.names = FALSE)
-
-
-
-
-
-
-
-
-
