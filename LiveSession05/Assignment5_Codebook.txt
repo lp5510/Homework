@@ -1,0 +1,128 @@
+Codebook
+title: "Live Session Unit 5 Assignment"
+author: "Luke Pierce"
+date: "February 13, 2018"
+
+Objective: Clean and merge two text files containing Year of Birth listings of Children's Names in the US and output the top ten girl's names
+for 2015-2016 from this dataset.
+
+Input Data:
+
+yob2016.txt, 2016 Year of Birth listing of Children's Names in the US, semicolon delimited
+Name      : First name
+Gender    : F or M
+Occurrence: Frequency of name, integer
+
+yob2015.txt, 2015 Year of Birth listing of Children's Names in the US, comma delimited
+Name      : First name
+Gender    : F or M
+Occurrence: Frequency of name, integer
+
+Objects:
+
+df: 2016 Year of Birth listing of Children's Names in the US (intermediate object) 
+Type: 'data.frame'
+32869 obs. of  3 variables:
+Name      : First name, character
+Gender    : Factor w/ 2 levels "F","M"
+Occurrence: Frequency of name (2015), integer
+
+##      Name           Gender      Occurrence     
+##  Length:32869       F:18758   Min.   :    5.0  
+##  Class :character   M:14111   1st Qu.:    7.0  
+##  Mode  :character             Median :   12.0  
+##                               Mean   :  110.7  
+##                               3rd Qu.:   30.0  
+##                               Max.   :19414.0
+
+
+y2016: 2016 Year of Birth listing of Children's Names in the US
+Type: 'data.frame'  
+32868 obs. of  3 variables:
+Name      : First name, character
+Gender    : Factor w/ 2 levels "F","M"
+Occurrence: Frequency of name (2016), integer
+
+     Name           Gender      Occurrence     
+ Length:32868       F:18757   Min.   :    5.0  
+ Class :character   M:14111   1st Qu.:    7.0  
+ Mode  :character             Median :   12.0  
+                              Mean   :  110.7  
+                              3rd Qu.:   30.0  
+                              Max.   :19414.0  
+
+y2015: 2015 Year of Birth listing of Children's Names in the US
+Type: 'data.frame'  
+32868 obs. of  3 variables:
+Name      : First name, character
+Gender    : Factor w/ 2 levels "F","M"
+Occurrence: Frequency of name (2015), integer
+
+     Name           Gender      Occurrence     
+ Length:33063       F:19054   Min.   :    5.0  
+ Class :character   M:14009   1st Qu.:    7.0  
+ Mode  :character             Median :   11.0  
+                              Mean   :  111.4  
+                              3rd Qu.:   30.0  
+                              Max.   :20415.0  
+
+final: 2016/2015 Combined Years of Birth listings of Children's Names in the US
+Type: 'data.frame'  
+31641 obs. of  5 variables:
+Name          : 
+Gender        : Factor w/ 2 levels "F","M"
+Occurrence2016: Frequency of name (2016), integer
+Occurrence2015: Frequency of name (2015), integer
+Total         : Frequency of name (2015-1016), integer
+
+     Name           Gender    Occurrence2016    Occurrence2015        Total        
+ Length:31641       F:17798   Min.   :    5.0   Min.   :    5.0   Min.   :   10.0  
+ Class :character   M:13843   1st Qu.:    8.0   1st Qu.:    8.0   1st Qu.:   18.0  
+ Mode  :character             Median :   16.0   Median :   16.0   Median :   35.0  
+                              Mean   :  179.2   Mean   :  181.3   Mean   :  360.4  
+                              3rd Qu.:   45.0   3rd Qu.:   46.0   3rd Qu.:  104.0  
+                              Max.   :19414.0   Max.   :20415.0   Max.   :39829.0  
+ 
+TopTenAll: Top Ten Children's names 2016/2015 Combined Years of Birth listings
+Type: 'data.frame' 
+10 obs. of  5 variables:
+Name          : First name, character
+Gender        : Factor w/ 2 levels "F","M"
+Occurrence2016: Frequency of name (2016), integer
+Occurrence2015: Frequency of name (2015), integer
+Total         : Frequency of name (2015-1016), integer
+
+    Name           Gender Occurrence2016  Occurrence2015      Total      
+ Length:10          F:5    Min.   :14416   Min.   :15574   Min.   :30296  
+ Class :character   M:5    1st Qu.:15311   1st Qu.:16020   1st Qu.:31594  
+ Mode  :character          Median :16154   Median :16986   Median :33014  
+                           Mean   :16812   Mean   :17564   Mean   :34376  
+                           3rd Qu.:18796   3rd Qu.:19278   3rd Qu.:38074  
+                           Max.   :19414   Max.   :20415   Max.   :39829  
+
+FemaleTopTen: Top Ten Girl's names 2016/2015 Combined Years of Birth listings
+Type: 'data.frame' 
+10 obs. of  2 variables:
+Name          : First name, character
+Total         : Frequency of name (2015-1016), integer
+
+    Name               Total      
+ Length:10          Min.   :21016  
+ Class :character   1st Qu.:24155  
+ Mode  :character   Median :29767  
+                    Mean   :29646  
+                    3rd Qu.:33233  
+                    Max.   :39829  
+
+Output csv: FemaleTopTen).csv
+Type: 'csv file' 
+10 obs. of  2 variables:
+Name          : First name, character
+Total         : Frequency of name (2015-1016), integer
+
+
+
+
+
+
+
