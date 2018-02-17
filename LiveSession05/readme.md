@@ -1,6 +1,11 @@
 # Unit05 Live Session Homework
 # Tidy Data
 
+### Updates 021718:
+1) Added Object delete command "rm(list = ls())"  to clear out old objects
+2) Changed code to read input files directly from Github directory associated with this assignment. 
+The RMD code previously submitted on 2DS site does not reflect these revisions
+
 ### Objectives:
 
 Clean and merge two text files containing Year of Birth listings of Children's Names in the US and output the top ten girl's names
