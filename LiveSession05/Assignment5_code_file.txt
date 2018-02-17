@@ -1,0 +1,127 @@
+#title: "Live Session Unit 5 Assignment"
+#author: "Luke Pierce"
+#date: "February 13, 2018"
+
+# work (wrn) env
+# setwd("J:/SMU/MSDS 6302 Doing Data Science/Lecture Assignments/Live Session Unit 5 Assignment")
+# setwd("Q:/SMU/MSDS 6302 Doing Data Science/Lecture Assignments/Live Session Unit 5 Assignment")
+
+# File loading from GitHub
+
+https://raw.githubusercontent.com/lp5510/Homework/master/LiveSession05/Data/
+https://raw.githubusercontent.com/lp5510/Homework/master/LiveSession05/Data/yob2016.txt
+https://raw.githubusercontent.com/lp5510/Homework/master/LiveSession05/Data/yob2015.txt
+
+# Define the 'root' URL where we will read the data from
+data_root_url <- "https://raw.githubusercontent.com/lp5510/Homework/master/LiveSession05/Data/";
+
+# Define the String URL's for the yob2016 and yob2015 datasets
+yob2016_url <- paste(data_root_url, "yob2016.txt", sep="");
+yob2015_url <- paste(data_root_url, "yob2015.txt", sep="");
+
+# Load the yob2016 and yob2015 datasets
+df <- read.table(url(yob2016_url), header = FALSE, sep=";", row.names = NULL)
+y2015 <- read.table(url(yob2015_url), header = FALSE, sep=",")
+
+# yob2016 cleaning
+
+# txt to csv
+# Use read.table to read in txt file which is semicolon delimited 
+#df <- read.table("yob2016.txt", header = FALSE, sep=";", row.names = NULL)
+
+# add column names
+names(df) <- c("Name", "Gender", "Occurrence")
+
+# change variable type for Name to character
+df$Name <- as.character(as.factor(df$Name))
+
+# summary and structure
+
+summary(df)
+
+str(df)
+
+# Find name with accidental "yyy" typed in
+df[grep("yyy", df$Name), ]
+
+# Remove this row from data frame
+y2016 <- df[-212, ]
+
+# yob2016 cleaning
+
+# txt to csv
+# Use read.table to read in txt file which is comma delimited 
+#y2015 <- read.table("yob2015.txt", header = FALSE, sep=",")
+
+# add column names
+names(y2015) <- c("Name", "Gender", "Occurrence")
+
+# change variable type for Name to character
+y2015$Name <- as.character(as.factor(y2015$Name))
+
+# summary
+summary(y2015)
+
+# structure
+str(y2015)
+
+# Examine last 10 values
+
+tail(y2015, 10)
+summary(tail(y2015, 10))
+
+# Merge yob2016 and yob2015
+
+library(dplyr)
+
+# Merge Female/male data frames using inner_join
+# return all rows from x where there are matching values in y, and all columns from x and y.
+# If there are multiple matches between x and y, all combination of the matches are returned.
+final <- dplyr::inner_join(y2016, y2015, by = "Name")
+
+# Select columns
+final <- select(final, "Name", "Gender.y", "Occurrence.x", "Occurrence.y")
+
+# Rename columns
+final <- rename(final, Gender = Gender.y, Occurrence2016 = Occurrence.x, Occurrence2015 = Occurrence.y)
+
+# Arrange rows by Gender
+final <- arrange(final, (Gender))
+
+# Data Summary
+
+# Sum occurrences for 2016 and 2015, append column, name "Total"
+final <- dplyr::mutate(final, Total = Occurrence2016 + Occurrence2015)
+
+# Sum Total Occurrences for names which appear both in 2015 and 2016
+sum(final$Total)
+
+# Sort Total by most popular names (Occurrence)
+MostPopularAll <- dplyr::arrange(final, desc(Total))
+
+# List top 10 only:
+TopTenAll <- dplyr::top_n(final, 10, Total)
+TopTenAll
+
+# 10 most popular girl names only
+FemaleMostPopularAll <- dplyr::filter(MostPopularAll, Gender=="F")
+dplyr::top_n(FemaleMostPopularAll, 10, Total)
+
+# trim list and remove extra columns
+FemaleTopTen <- dplyr::top_n(FemaleMostPopularAll, 10, Total)
+FemaleTopTen <- select(FemaleTopTen, "Name", "Total")
+FemaleTopTen
+
+# Final output to csv
+
+# Write out to csv file
+write.csv(FemaleTopTen, file = "FemaleTopTen.csv", row.names = FALSE)
+
+
+
+
+
+
+
+
+
