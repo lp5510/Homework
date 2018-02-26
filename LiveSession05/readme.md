@@ -1,4 +1,8 @@
 # Unit05 Live Session Homework
+DS 6306
+Spring 2018
+Luke Pierce
+lepierce@smu.edu
 # Tidy Data
 
 ### Updates 021718:
