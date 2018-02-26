@@ -1,4 +1,6 @@
 # Unit04 Live Session Homework
+DS 6306 Spring 2018
+lepierce@smu.edu
 # Versioning
 
 
