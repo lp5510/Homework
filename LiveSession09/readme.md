@@ -5,10 +5,8 @@ Luke Pierce
 lepierce@smu.edu
 # Preparing Data
 
-### Updates 021718:
-1) Added Object delete command "rm(list = ls())"  to clear out old objects
-2) Changed code to read input files directly from Github directory associated with this assignment. 
-The RMD code previously submitted on 2DS site does not reflect these revisions
+### Updates 030718:
+Added RMD and RScript files
 
 ### Assignment:
 
@@ -46,7 +44,7 @@ Description of inputs and output files and generated objects:
 
 #### Assignment5_codebook
 
-Raw input files used from websites:
+Raw input files used from websites below:
 
 
 RMarkdown, HTML and graphics files used to generate analysis and csv output:
