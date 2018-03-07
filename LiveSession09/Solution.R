@@ -178,5 +178,11 @@ fgpct <- dplyr::arrange(fgpct, desc(Position))
 
 fgpct$Name2 <- factor(fgpct$Name, as.character(fgpct$Name))
 
+
+# Plot barchart by player and clustered by position
 p <- ggplot(fgpct, aes(x=Name2, y=`FG%`, fill=Position)) +  geom_bar(stat="identity") + theme_classic() + coord_flip() +
   labs(title ="Field Goals by Player and Position", x = "Name of Player", y = "Field Goal Percentage")
+
+p
+
+
