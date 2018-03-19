@@ -1,8 +1,8 @@
 # Clean the workspace, remove all existing Objects
 rm(list=ls())
 
-setwd("P:/SMU/MSDS 6306 Doing Data Science/Lecture Assignments/Live Session Unit 10 Assignment")
-setwd("J:/SMU/MSDS 6306 Doing Data Science/Lecture Assignments/Live Session Unit 10 Assignment")
+#setwd("P:/SMU/MSDS 6306 Doing Data Science/Lecture Assignments/Live Session Unit 10 Assignment")
+#setwd("J:/SMU/MSDS 6306 Doing Data Science/Lecture Assignments/Live Session Unit 10 Assignment")
 
 # Load the needed libraries
 
