@@ -3,9 +3,9 @@ DS 6306
 Spring 2018
 Luke Pierce
 lepierce@smu.edu
-# Preparing Data
+# Exploratory Data
 
-### Updates 030718:
+### Updates 031918:
 Added RMD and RScript files
 
 ### Assignment:
