@@ -51,21 +51,21 @@ Added RMD and RScript files
 
 
 
-### Files:
+## Files:
 
-Commented R source code: 
+### Commented R source code: 
 
 #### Solution.R
 
-Data files
+## Data files
 
-VH Data: 
-N-MHSS-2015-DS0001-data-r.rda
+### VH Data: 
+#### N-MHSS-2015-DS0001-data-r.rda
 
-State Size data:
-statesize.csv
+### State Size data:
+#### statesize.csv
 
-RMarkdown, HTML and graphics files used to generate analysis:
+### RMarkdown, HTML and graphics files used to generate analysis:
  
 #### l_pierce_Livesession10assignment.html
 #### l_pierce_Livesession10assignment.md
