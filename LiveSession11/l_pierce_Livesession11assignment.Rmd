@@ -11,6 +11,25 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
+# Define variables to be used throughout the document
+# The base/root URL to load the data from
+data_root_url <- "https://raw.githubusercontent.com/allthebits/msds6306-case-study-01/master/data/"
+
+# Define the String URL's for the Beer and Brewery datasets
+beer_url <- paste(data_root_url, "Beers.csv", sep="");
+brewery_url <- paste(data_root_url, "Breweries.csv", sep="");
+
+# Load the Beer and Brewery Datasets
+beer <- read.csv(url(beer_url), header = TRUE, sep=",", row.names = NULL)
+brewery <- read.csv(url(brewery_url), header = TRUE, sep=",", row.names = NULL)
+
+
+
+
+
+
+
+
 setwd("P:/SMU/MSDS 6306 Doing Data Science/Lecture Assignments/Live Session Unit 11 Assignment")
 
 # Clean the workspace, remove all existing Objects
