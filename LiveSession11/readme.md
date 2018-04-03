@@ -42,12 +42,12 @@ Added RMD and RScript files
 
 #### d. Bind the two xts objects together and create a dygraph from it. Utilize the help() index if you’re stuck.
 
-##### +Give an effective title and x/y axes.
-##### +Label each Series (via dySeries) to be the appropriate wand-maker. So, one line should create a label for Ollivander and the other for Gregorovitch.
-##### +CStack this graph and modify the two lines to be different colors (and not the default ones!) Any colors are fine, but make sure they’re visible and that Ollivander is a different color than Gregorovitch.
-##### +Activate a range selector and make it big enough to view.
-##### +Use dyShading to illuminate approximately when Voldemort was revived and at-large: between 1995 to 1999.
-##### +Enable Highlighting on the graph, so mousing over a line bolds it.
+#### +Give an effective title and x/y axes.
+#### +Label each Series (via dySeries) to be the appropriate wand-maker. So, one line should create a label for Ollivander and the other for Gregorovitch.
+#### +CStack this graph and modify the two lines to be different colors (and not the default ones!) Any colors are fine, but make sure they’re visible and that Ollivander is a different color than Gregorovitch.
+#### +Activate a range selector and make it big enough to view.
+#### +Use dyShading to illuminate approximately when Voldemort was revived and at-large: between 1995 to 1999.
+#### +Enable Highlighting on the graph, so mousing over a line bolds it.
 
 ## Files:
 
