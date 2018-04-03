@@ -127,9 +127,6 @@ lines(fit_maxtemp_ses_1990_2016_5y, col="red", type="o")
 # Forecasted Values
 lines(maxtemp_ses_1990_2016_5y$mean, col="green", type="o")
 
-# plot datelime from 2016
-abline(v=2016, col="red")
-
 legend("topleft", lty=1, col=c("blue", "red", "green"), c("Predicted", "Fitted", "5 Year Forecast"), pch=1)
 
 ``` 
