@@ -11,6 +11,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
+# Set to your working directory after adding Wand data files
 setwd("P:/SMU/MSDS 6306 Doing Data Science/Lecture Assignments/Live Session Unit 11 Assignment")
 
 # Clean the workspace, remove all existing Objects
@@ -32,7 +33,7 @@ knitr::opts_chunk$set(fig.width=10, fig.height=6)
 
 ```
 
-####GitHub Repository: https://github.com/lp5510/Homework/tree/master/LiveSession10
+####GitHub Repository: https://github.com/lp5510/Homework/tree/master/LiveSession11
 
 # Questions
 
