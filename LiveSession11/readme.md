@@ -5,7 +5,7 @@ Luke Pierce
 lepierce@smu.edu
 # Exploratory Data
 
-### Updates 031918:
+### Updates 040218:
 Added RMD and RScript files
 
 ### Assignment:
