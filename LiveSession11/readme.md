@@ -53,20 +53,18 @@ Added RMD and RScript files
 
 ### Commented R source code: 
 
-#### Solution.R
+#### LectureAssignment11.R
 
 ## Data files
 
-### VH Data: 
-#### N-MHSS-2015-DS0001-data-r.rda
-
-### State Size data:
-#### statesize.csv
+### Wands Data: 
+#### Unit11TimeSeries_Gregorovitch.csv
+#### Unit11TimeSeries_Ollivander.csv
 
 ### RMarkdown, HTML and graphics files used to generate analysis:
  
-#### l_pierce_Livesession10assignment.html
-#### l_pierce_Livesession10assignment.md
-#### l_pierce_Livesession10assignment.Rmd
-#### l_pierce_Livesession10assignment/figure.html
+#### l_pierce_Livesession11assignment.html
+#### l_pierce_Livesession11assignment.md
+#### l_pierce_Livesession11assignment.Rmd
+#### l_pierce_Livesession11assignment/figure.html
 
